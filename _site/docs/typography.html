@@ -1,0 +1,181 @@
+
+<link rel="stylesheet" href="http://basehold.it/10">
+
+%main#typography-test
+  %h1 This is a top-level heading (h1)
+  %h2 This is a second-level heading (h2)
+  %h3 This is a third-level heading (h3)
+  %h4 This is a fourth-level heading (h4)
+
+  %p
+    This is a paragraph.
+  %p
+    This is a longer paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
+  %p
+    This is super-text. It's huge. Like for quality scores:
+  %p.super-text
+    99<sup>%</sup>
+  %small Note: Set the % in sup and it will be taken care of, too. And this is an example of small text
+
+  %section
+    %h1 The dirty details
+    %p Blue Steel typography is based on a 10px baseline grid. All type measurements are determined by the baseline and are relative to it. Examples of various components and elements can be seen falling on the baseline grid on this page.
+    %ul
+      %li Top-level headings (H1) are 4x the baseline grid.
+      %li Second-level headings (H2) are 3x the baseline grid.
+      %li Other elements are 2x the baseline grid.
+      %li
+        Fine print is 75% of the baseline grid and set smaller than the default font size.
+
+  %section
+    %h1 Alerts
+    .alert-msg.success-msg
+      %p.icon-check-sign This is a success alert.
+
+  %section
+    %h1 Buttons
+    %div
+      %a.btn.btn-small Small
+      %a.btn Medium
+      %a.btn.btn-large Large Button
+      %a.btn.btn-pill Pill Button
+      %a.btn.btn-thinline Thinline
+
+  %section
+    %h1 Segmented Controllers
+    %div
+      .style-example
+        %h4 Checkbox Regular Controller
+        .btn-group{data: {toggle: 'buttons-checkbox'}}
+          %a.btn Action One
+          %a.btn Action Two
+          %a.btn Action Three
+      .style-example
+        %h4 Checkbox Pill Controller
+        .btn-group{data: {toggle: 'buttons-checkbox'}}
+          %a.btn.btn-pill Pill #1
+          %a.btn.btn-pill Pill #2
+          %a.btn.btn-pill Pill #3
+      .style-example
+        %h4 Radio Regular Controller
+        .btn-group{data: {toggle: 'buttons-radio'}}
+          %a.btn Action One
+          %a.btn Action Two
+          %a.btn Action Three
+      .style-example
+        %h4 Radio Pill Controller
+        .btn-group{data: {toggle: 'buttons-radio'}}
+          %a.btn.btn-pill Pill #1
+          %a.btn.btn-pill Pill #2
+          %a.btn.btn-pill Pill #3
+
+  %section
+    %h1 Primary and Secondary nav
+    = render partial: 'primary_nav'
+    = render partial: 'secondary_nav'
+
+    %h2#subnav Sub-Navigation
+    .pills
+      = render partial: 'subnav'
+    .tabs
+      = render partial: 'subnav_tabs'
+
+  %section#components
+    %h1 Components
+
+    #sidebar.sidebar-example-wrapper
+      .sidebar-example-wrapper
+        %h2 Sidebar Example with header
+        = render partial: 'sidebar_with_header'
+
+  %section#tables
+    %h2 Tables
+    %p We have one custom table styling. This is used for styling large lists similar to the registry patient list.
+    %h3#table-example Example Table
+    .simple-table-pagination
+      = render partial: 'tables'
+
+
+
+  %section#info-bars
+    %h2 Info Bars
+    = render partial: 'info_bar'
+
+    .info-row
+      %h3#info-other Other examples
+      = render partial: 'info_bar_other'
+
+
+
+  %section#lists
+    %h2 Lists
+    .component-row
+      #key-value-table.key-value-example
+        .component
+          .component-content
+            %p Key Value Styles
+            %dl.key-values-example
+              %dt Key
+              %dd Value
+              %dt Key 2
+              %dd Value 2
+            %p Key Value Value Styles
+            %dl.key-value-value-example
+              %dt label
+              %dd Value 1
+              %dd Value 2
+              %dt label
+              %dd Value 1
+              %dd Value 2
+              %dt label
+              %dd Value 1
+              %dd Value 2
+
+      #key-value-list.list-in-a-box
+        .component
+          .component-content
+            %p Key Value List
+            %dl.key-values-inline-list
+              %dt ID
+              %dd 12345xst
+              %dt Allergies
+              %dd Bees
+              %dd Peanuts
+              %dt DOB
+              %dd 5/24/1984
+            %p.explain-list You can highlight the values and not the values with .highlight-values
+            %dl.key-values-inline-list.highlight-values
+              %dt ID
+              %dd 12345xst
+              %dt Allergies
+              %dd Bees
+              %dd Peanuts
+              %dt DOB
+              %dd 5/24/1984
+
+
+      #headlines.allergies-container
+        #big.component
+          .component-content
+            %ul.headlines-list
+              %li
+                .headline Big Headline
+                %p.announcement
+                  %a{href:'#big'} My big headline
+                  is coming soon.
+                .announcement-note Today
+              %li
+                %p.announcement
+                  %a{href:'#big'} Not so big headline
+                  is coming soon.
+                .announcement-note Yesterday
+              %li
+                .headline Another Big Headline!
+                %p.announcement
+                  %a{href:'#big'} Kinda big annoucement is coming soon.
+                .announcement-note 2 days ago
+
+  %section#progress-bar
+    %h2 Progress Bars
+    .progress-bar-example{ style: 'width: 300px;' }
+      = render partial: 'progress_bar'

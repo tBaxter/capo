@@ -1,181 +1,104 @@
-
+---
+layout: default
+title: Capo typography
+---
 <link rel="stylesheet" href="http://basehold.it/10">
 
-%main#typography-test
-  %h1 This is a top-level heading (h1)
-  %h2 This is a second-level heading (h2)
-  %h3 This is a third-level heading (h3)
-  %h4 This is a fourth-level heading (h4)
+### Typography
+Capo takes your typography seriously. It defines a solid typographic scale and baseline grid, and ensures elements fall on it. Best of all, it makes good typography easy, with simple variables and mixins. You mark up you code semantically, and know the styles are right.
 
-  %p
-    This is a paragraph.
-  %p
-    This is a longer paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
-  %p
-    This is super-text. It's huge. Like for quality scores:
-  %p.super-text
-    99<sup>%</sup>
-  %small Note: Set the % in sup and it will be taken care of, too. And this is an example of small text
+<h1 class="super-text">This is "super text"</h1>
+# This is a top-level heading (h1)
+## This is a second-level heading (h2)
+### This is a third-level heading (h3)
+#### This is a fourth-level heading (h4)
+##### This is a fifth-level heading (h4)
 
-  %section
-    %h1 The dirty details
-    %p Blue Steel typography is based on a 10px baseline grid. All type measurements are determined by the baseline and are relative to it. Examples of various components and elements can be seen falling on the baseline grid on this page.
-    %ul
-      %li Top-level headings (H1) are 4x the baseline grid.
-      %li Second-level headings (H2) are 3x the baseline grid.
-      %li Other elements are 2x the baseline grid.
-      %li
-        Fine print is 75% of the baseline grid and set smaller than the default font size.
+<p class="breakout-text"> This is breakout (larger) text</p>
 
-  %section
-    %h1 Alerts
-    .alert-msg.success-msg
-      %p.icon-check-sign This is a success alert.
+This is a normal, default paragraph.
 
-  %section
-    %h1 Buttons
-    %div
-      %a.btn.btn-small Small
-      %a.btn Medium
-      %a.btn.btn-large Large Button
-      %a.btn.btn-pill Pill Button
-      %a.btn.btn-thinline Thinline
+<p class="sub-text"> This is sub-text.</p>
 
-  %section
-    %h1 Segmented Controllers
-    %div
-      .style-example
-        %h4 Checkbox Regular Controller
-        .btn-group{data: {toggle: 'buttons-checkbox'}}
-          %a.btn Action One
-          %a.btn Action Two
-          %a.btn Action Three
-      .style-example
-        %h4 Checkbox Pill Controller
-        .btn-group{data: {toggle: 'buttons-checkbox'}}
-          %a.btn.btn-pill Pill #1
-          %a.btn.btn-pill Pill #2
-          %a.btn.btn-pill Pill #3
-      .style-example
-        %h4 Radio Regular Controller
-        .btn-group{data: {toggle: 'buttons-radio'}}
-          %a.btn Action One
-          %a.btn Action Two
-          %a.btn Action Three
-      .style-example
-        %h4 Radio Pill Controller
-        .btn-group{data: {toggle: 'buttons-radio'}}
-          %a.btn.btn-pill Pill #1
-          %a.btn.btn-pill Pill #2
-          %a.btn.btn-pill Pill #3
+<small>This is the fine print</small>
 
-  %section
-    %h1 Primary and Secondary nav
-    = render partial: 'primary_nav'
-    = render partial: 'secondary_nav'
+# The details
 
-    %h2#subnav Sub-Navigation
-    .pills
-      = render partial: 'subnav'
-    .tabs
-      = render partial: 'subnav_tabs'
+Capo typography is based on a 10px baseline grid. All type measurements are determined by the baseline and are relative to it. Examples of various components and elements can be seen falling on the baseline grid on this page.
 
-  %section#components
-    %h1 Components
+- Top-level headings (H1) are 4x the baseline grid.  
+- Second-level headings (H2) are 3x the baseline grid.  
+- Other elements are 2x the baseline grid.  
+- Fine print is 75% of the baseline grid and set smaller than the default font size.  
 
-    #sidebar.sidebar-example-wrapper
-      .sidebar-example-wrapper
-        %h2 Sidebar Example with header
-        = render partial: 'sidebar_with_header'
+# Choosing the correct tag
 
-  %section#tables
-    %h2 Tables
-    %p We have one custom table styling. This is used for styling large lists similar to the registry patient list.
-    %h3#table-example Example Table
-    .simple-table-pagination
-      = render partial: 'tables'
+Do not choose tags based on the default size, choose them semantically. You can apply the mixin you need for visual style.
 
-
-
-  %section#info-bars
-    %h2 Info Bars
-    = render partial: 'info_bar'
-
-    .info-row
-      %h3#info-other Other examples
-      = render partial: 'info_bar_other'
-
-
-
-  %section#lists
-    %h2 Lists
-    .component-row
-      #key-value-table.key-value-example
-        .component
-          .component-content
-            %p Key Value Styles
-            %dl.key-values-example
-              %dt Key
-              %dd Value
-              %dt Key 2
-              %dd Value 2
-            %p Key Value Value Styles
-            %dl.key-value-value-example
-              %dt label
-              %dd Value 1
-              %dd Value 2
-              %dt label
-              %dd Value 1
-              %dd Value 2
-              %dt label
-              %dd Value 1
-              %dd Value 2
-
-      #key-value-list.list-in-a-box
-        .component
-          .component-content
-            %p Key Value List
-            %dl.key-values-inline-list
-              %dt ID
-              %dd 12345xst
-              %dt Allergies
-              %dd Bees
-              %dd Peanuts
-              %dt DOB
-              %dd 5/24/1984
-            %p.explain-list You can highlight the values and not the values with .highlight-values
-            %dl.key-values-inline-list.highlight-values
-              %dt ID
-              %dd 12345xst
-              %dt Allergies
-              %dd Bees
-              %dd Peanuts
-              %dt DOB
-              %dd 5/24/1984
-
-
-      #headlines.allergies-container
-        #big.component
-          .component-content
-            %ul.headlines-list
-              %li
-                .headline Big Headline
-                %p.announcement
-                  %a{href:'#big'} My big headline
-                  is coming soon.
-                .announcement-note Today
-              %li
-                %p.announcement
-                  %a{href:'#big'} Not so big headline
-                  is coming soon.
-                .announcement-note Yesterday
-              %li
-                .headline Another Big Headline!
-                %p.announcement
-                  %a{href:'#big'} Kinda big annoucement is coming soon.
-                .announcement-note 2 days ago
-
-  %section#progress-bar
-    %h2 Progress Bars
-    .progress-bar-example{ style: 'width: 300px;' }
-      = render partial: 'progress_bar'
+<table>
+  <tr>
+    <th>I am marking up</th>
+    <th>Tag</th>
+    <th>Computed size</th>
+    <th>Class/mixin</th>
+  </tr>
+  <tr>
+    <td class="super-text">Big giant call out text</td>
+    <td></td>
+    <td>48px</td>
+    <td>Use .super-text class/mixin</td>
+  </tr>
+  <tr>
+    <td class="xl-header">Top-level headings</td>
+    <td>H1</td>
+    <td>32</td>
+    <td>.xl-header</td>
+  </tr>
+  <tr>
+    <td class="large-header">Second-level headings</td>
+    <td>H2</td>
+    <td>24</td>
+    <td>.large-header</td>
+  </tr>
+  <tr>
+    <td class="medium-header">Navigational and third-level content headings</td>
+    <td>H3</td>
+    <td>21</td>
+    <td>.medium-header</td>
+  </tr>
+  <tr>
+    <td class="small-header">Minor headings</td>
+    <td>H4</td>
+    <td>18</td>
+    <td>.small-header</td>
+  </tr>
+  <tr>
+    <td class="x-small-header">Minor headings</td>
+    <td>H5</td>
+    <td>16</td>
+    <td>.x-small-header</td>
+  </tr>
+  <tr>
+    <td class="breakout-text">Larger-than-normal text</td>
+    <td></td>
+    <td>16</td>
+    <td>.breakout-text</td>
+  </tr>
+  <tr>
+    <td>Default text</td>
+    <td></td>
+    <td>14</td>
+    <td>.breakout-text</td>
+  </tr>
+  <tr>
+    <td class="sub-text">Sub text</td>
+    <td></td>
+    <td>13</td>
+    <td>.sub-text</td>
+  </tr>
+    <td class="small-text">Fine print</td>
+    <td>small</td>
+    <td>12</td>
+    <td>.small-text</td>
+  </tr>
+</table>

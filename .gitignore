@@ -2,3 +2,8 @@
 /source/sass/css/
 /source/sass/assets/css/
 /source/css/
+/_site/MANIFEST.in
+/_site/README.md
+/_site/sample_index.html
+/_site/setup.py
+/_site/source/

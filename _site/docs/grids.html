@@ -65,17 +65,80 @@
         </div>
       </header>
       <div id="content" class="constrain">
-        <div class="hero">
-  <h1>Say hello to Capo!</h1>
-  <p>A loose, reusable framework-y collection of css and javascript.</p>
-</div>
+        <article class="tabs">
 
-<section id="downloads">
-  <a class="zip_download_link" href="https://github.com/tBaxter/capo/zipball/master">Download this project as a .zip file</a>
-  <a class="tar_download_link" href="https://github.com/tBaxter/capo/tarball/master">Download this project as a tar.gz file</a>
-</section>
+  * [Introduction](#col-intro)  
+  * [Four columns](#four-col)  
+  * [Three columns](#three-col)  
+  * [Golden ratio](#phi)  
 
+  <section id="col-intro" class="columned auto">
+    <div>
+      ##Easy columns
+      Content can be gridded off into one to six columns simply by added a 'columned' class to the parent. The children can be any element at all: divs, list items, sections... anything you like.
+      
+           foo class="columned"
+    </div>
+    <div>
+      ##Controllable...
+      By default, content will be display in three columns. However, you can set the number by adding a class specifying the number of columns: 'four-col', 'two-col', 'five-col', etc:
 
+           foo class="columned four-col"
+    </div>
+    <div>
+      ##Or automatic...
+      There is some support for 'columned auto', to set the number of columns according to available sensible width. In fact, this column grid is set to auto width: 
+
+             foo class="columned auto"
+      </p>
+    </div>
+    <div>
+      ##Responsive
+      On small screens, multiple columns will be reset to a more appropriate width. For example, four-col will automatically collapse down to two-col on very small screens.
+    </div>
+    <div>
+      ##Layout-ready
+      There is also support for 'columned phi' and 'columned phi reverse', which both automatically break content into two columns based on the golden ratio.
+    </div>
+    <div>
+      ##Nestable
+      You can nest grids as much as you want. Need four columns in your main area and two in your side bar? No problem.
+    </div>
+  </section>
+  <section id="four-col" class="columned four-col">
+    ###This is a four-column grid
+
+    It mixes an h2, two paragraphs and a button.
+
+    Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+
+    <a class="btn" href="#">Button &raquo;</a>
+  </section>
+  <section id="three-col" class="columned">
+    <div>
+      ###Three columns
+      Mixing in a table.
+    </div>
+    
+    Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+
+    <table>
+      <tr><td>1</td><td>2</td></tr>
+      <tr><td>3</td><td>4</td></tr>
+    </table>
+  </section>
+  <section id="phi" class="columned phi">
+    <div>
+      ##Golden ratio: Wide main column
+      Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+    </div>
+    <div>
+      ##Sidebar
+      You could reverse the columns Simply by adding a 'reverse' class:
+           foo class="columned phi reverse
+    </div>
+  </section>
+</article>
       </div><!-- /#content -->
     </div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>

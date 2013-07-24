@@ -21,109 +21,81 @@
           <a href="#main_menu>ul" class="trigger" title="Menu">
             <span class='navicon'>≡≡</span>
           </a>
-          <hgroup>
+          <div class="site-name">
               <!-- <h2>subtitle or overline</h2> -->
-              <h1>Site Title</h1>
-              <!--<h3>tagline or kicker</h3>-->
-          </hgroup>
+              <h1>Capo</h1>
+              <!--<h2>tagline or kicker</h2>-->
+          </div>
           <nav class="clearfix" role="navigation">
-            <ul id="main_menu" class="columned four-col">
-              <li><a href="#">Columns</a>
-                <ul class="subnav">
-                  <li><a href="#col-intro">Introduction</a></li>
-                  <li><a href="#auto-col">Auto</a></li>
-                  <li><a href="#four-col">Four-col</a></li>
-                  <li><a href="#three-col">Three-col</a></li>
-                  <li><a href="#phi">Golden ratio</a></li>
+            <ul id="main_menu" class="columned four-col" role="menu">
+              <li>
+                <a href="/capo/docs/typography.html">Typography</a>
+                <ul>
+                  - [Introduction](/capo/docs/typography.html)  
+                  - [Baseline Grid](/capo/docs/typography#grid.html)  
+                  - [Sizes](/capo/docs/typography#sizes.html)  
                 </ul>
               </li>
-              <li><a href="#">Discussion</a>
-                <ul class="subnav">
-                  <li><a href="#">subitem</a></li>
-                  <li><a href="#">subitem</a></li>
-                  <li><a href="#">subitem</a></li>
-                  <li><a href="#">subitem</a></li>
+              <li><a href="/capo/docs/grids.html">Layout Grids</a>
+                <ul>
+                  <li><a href="/capo/docs/grids.html#col-intro">Introduction</a></li>
+                  <li><a href="/capo/docs/grids.html#auto-col">Auto</a></li>
+                  <li><a href="/capo/docs/grids.html#four-col">Four-col</a></li>
+                  <li><a href="/capo/docs/grids.html#three-col">Three-col</a></li>
+                  <li><a href="/capo/docs/grids.html#phi">Golden ratio</a></li>
                 </ul>
               </li>
-              <li><a href="#">History</a>
-                <ul class="subnav">
-                  <li><a href="#">subitem</a></li>
-                  <li><a href="#">subitem</a></li>
-                  <li><a href="#">subitem</a></li>
-                  <li><a href="#">subitem</a></li>
+              <li>
+                Page elements
+                <ul>
+                  - Forms  
+                  - Buttons  
+                  - Tables  
                 </ul>
               </li>
-              <li><a href="#">Happenings</a>
-                <ul class="subnav">
-                  <li><a href="#">subitem</a></li>
-                  <li><a href="#">subitem</a></li>
-                  <li><a href="#">subitem</a></li>
-                  <li><a href="#">subitem</a></li>
-                </ul>
-              </li>
-              <li><a href="#">A/V Room</a>
-                <ul class="subnav">
-                  <li><a href="#">subitem</a></li>
-                  <li><a href="#">subitem</a></li>
-                  <li><a href="#">subitem</a></li>
-                  <li><a href="#">subitem</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Words</a>
-                <ul class="subnav">
-                  <li><a href="#">subitem</a></li>
-                  <li><a href="#">subitem</a></li>
-                  <li><a href="#">subitem</a></li>
-                  <li><a href="#">subitem</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Diversions</a>
-                <ul class="subnav">
-                  <li><a href="#">subitem</a></li>
-                  <li><a href="#">subitem</a></li>
-                  <li><a href="#">subitem</a></li>
-                  <li><a href="#">subitem</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Misc</a>
-                <ul class="subnav">
-                  <li><a href="#pagination">pagination</a></li>
-                  <li><a href="#">subitem</a></li>
-                  <li><a href="#">subitem</a></li>
-                  <li><a href="#">subitem</a></li>
+              <li>
+                Also included
+                <ul>
+                  - Calendars
+                  
                 </ul>
               </li>
             </ul>
           </nav>
         </div>
       </header>
-      <div class="constrain hero" id="herotext" >
-          <h1>Hello, world!</h1>
-          <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-      </div>
       <div id="content" class="constrain">
         <link rel="stylesheet" href="http://basehold.it/10">
+<style>
+  h1 {background: rgba(0,0,0, 0.2);}
+  h2 {background: rgba(100, 0, 0, 0.2);}
+  h3 {background: rgba(100, 100, 0, 0.2);}
+  h4 {background: rgba(100, 100, 100, 0.2);}
+  h5 {background: rgba(0, 100, 100, 0.2);}
+  p {background: rgba(0, 0, 100, 0.2);}
+  .breakout-text {background: rgba(200, 100, 0, 0.2);}
+  .sub-text {background: rgba(200, 0, 100, 0.2);}
+  .small-text {background: rgba(200, 0, 200, 0.2);}
+</style>
 
-### Typography
+<span class="super-text">ab</span>
+<span class="xl-header">ab</span>
+<span class="large-header">ab</span>
+<span class="medium-header">ab</span>
+<span class="small-header">ab</span>
+<span class="breakout-text">ab</span>
+<span class="body-text">ab</span>
+<span class="sub-text">ab</span>
+<small>ab</small>
+
+#Typography
 Capo takes your typography seriously. It defines a solid typographic scale and baseline grid, and ensures elements fall on it. Best of all, it makes good typography easy, with simple variables and mixins. You mark up you code semantically, and know the styles are right.
 
-<h1 class="super-text">This is "super text"</h1>
-# This is a top-level heading (h1)
-## This is a second-level heading (h2)
-### This is a third-level heading (h3)
-#### This is a fourth-level heading (h4)
-##### This is a fifth-level heading (h4)
 
-<p class="breakout-text"> This is breakout (larger) text</p>
 
-This is a normal, default paragraph.
 
-<p class="sub-text"> This is sub-text.</p>
 
-<small>This is the fine print</small>
-
-# The details
-
+###The grid
 Capo typography is based on a 10px baseline grid. All type measurements are determined by the baseline and are relative to it. Examples of various components and elements can be seen falling on the baseline grid on this page.
 
 - Top-level headings (H1) are 4x the baseline grid.  
@@ -131,11 +103,11 @@ Capo typography is based on a 10px baseline grid. All type measurements are dete
 - Other elements are 2x the baseline grid.  
 - Fine print is 75% of the baseline grid and set smaller than the default font size.  
 
-# Choosing the correct tag
+#Choosing the correct tag
 
 Do not choose tags based on the default size, choose them semantically. You can apply the mixin you need for visual style.
 
-<table>
+<table id="sizes">
   <tr>
     <th>I am marking up</th>
     <th>Tag</th>
@@ -185,7 +157,7 @@ Do not choose tags based on the default size, choose them semantically. You can 
     <td>.breakout-text</td>
   </tr>
   <tr>
-    <td>Default text</td>
+    <td class="body-text">Default text</td>
     <td></td>
     <td>14</td>
     <td>.breakout-text</td>
@@ -196,6 +168,7 @@ Do not choose tags based on the default size, choose them semantically. You can 
     <td>13</td>
     <td>.sub-text</td>
   </tr>
+  <tr>
     <td class="small-text">Fine print</td>
     <td>small</td>
     <td>12</td>

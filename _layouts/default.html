@@ -28,8 +28,15 @@
           </div>
           <nav class="clearfix" role="navigation">
             <ul id="main_menu" class="columned four-col" role="menu">
-              <li><a href="/capo/docs/typography.html">Typography</a></li>
-              <li><a href="/capo/docs/grids.html">Grids</a>
+              <li>
+                <a href="/capo/docs/typography.html">Typography</a>
+                <ul>
+                  - [Introduction](/capo/docs/typography.html)  
+                  - [Baseline Grid](/capo/docs/typography#grid.html)  
+                  - [Sizes](/capo/docs/typography#sizes.html)  
+                </ul>
+              </li>
+              <li><a href="/capo/docs/grids.html">Layout Grids</a>
                 <ul>
                   <li><a href="/capo/docs/grids.html#col-intro">Introduction</a></li>
                   <li><a href="/capo/docs/grids.html#auto-col">Auto</a></li>
@@ -38,14 +45,25 @@
                   <li><a href="/capo/docs/grids.html#phi">Golden ratio</a></li>
                 </ul>
               </li>
+              <li>
+                Page elements
+                <ul>
+                  - Forms  
+                  - Buttons  
+                  - Tables  
+                </ul>
+              </li>
+              <li>
+                Also included
+                <ul>
+                  - Calendars
+                  
+                </ul>
+              </li>
             </ul>
           </nav>
         </div>
       </header>
-      <div class="constrain hero" id="herotext" >
-          <h1>Hello, world!</h1>
-          <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-      </div>
       <div id="content" class="constrain">
         {{ content }}
       </div><!-- /#content -->
